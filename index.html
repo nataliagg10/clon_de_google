@@ -1,0 +1,125 @@
+<!--
+    Programadora: Natalia Alejandra Guillermo García
+    Nombre del programa: Clon de Google 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="estilos.css" rel="stylesheet">
+    <title>Clon de Google</title>
+</head>
+<body>
+    <header>
+        <nav> <!--elementos de navegación principal-->
+            <ul class="nav-right-section">
+                <li><a href="https://mail.google.com/mail/?authuser=0&ogbl">Gmail</a></li>
+                <li><a href="https://www.google.com.gt/imghp?hl=es-419&authuser=0&ogbl">Imagenes</a></li>
+                <li class="menu-icon"><a href="#"></a></li>
+                <img src="https://lh3.googleusercontent.com/ogw/AOLn63F7lAfmstxav30djDJUo4LDt6K2ygs-YuO2yp6l3Q=s64-c-mo">
+            </ul>
+        </nav>
+    </header>
+    
+    <main>
+        <!--logo-->
+        <section class="main-logo">
+            <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png">
+        </section>
+
+        <!--barra de busqueda-->
+        <section class="main-input">
+            <div class="main-input-container">
+                <span class="search-icon" href=""></span>
+                <input type="text" id="texto" onkeydown="runFunction(event)">
+                <a class="micro-icon" href=""></a>
+                <a class="cam-icon" href=""></a>
+            </div>
+        </section>
+
+        <!--botones-->
+        <section class="main-buttons">
+            <div><button onclick="op1()">Buscar con Google</button></div>
+            <div><button onclick="op2()">Voy a tener suerte</button></div>
+        </section>
+    </main>
+    <footer>
+        <!--país-->
+        <div>
+            <ul class="pais-izquierda">
+                <li>Guatemala</li>
+            </ul>
+        </div>
+        <br>
+        <!--lista izquierda-->
+        <ul class="lista-izquierda">
+            <li><a href="https://about.google/?utm_source=google-GT&utm_medium=referral&utm_campaign=hp-footer&fg=1">Sobre Google</a></li>
+            <li><a href="https://www.google.com/intl/es-419_gt/ads/?subid=ww-ww-et-g-awa-a-g_hpafoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpafooter&fg=1">Publicidad</a></li>
+            <li><a href="https://www.google.com/services/?subid=ww-ww-et-g-awa-a-g_hpbfoot1_1!o2&utm_source=google.com&utm_medium=referral&utm_campaign=google_hpbfooter&fg=1">Negocios</a></li>
+            <li><a href="https://google.com/search/howsearchworks/?fg=1">Cómo funciona la Búsqueda</a></li>
+        </ul>
+        <!--lista derecha-->
+        <ul class="lista-derecha">
+            <li><a href="https://policies.google.com/privacy?hl=es-419&fg=1">Privacidad</a></li>
+            <li><a href="https://policies.google.com/terms?hl=es-419&fg=1">Condiciones</a></li>
+            <li><a href="#"><span class="menu-preferencias" onclick="menu1()">Preferencias</span></a></li> <!--links muertos/que no lleva a ningún lado-->
+        </ul>
+        <div id="menu-prefe1" class="hidden">
+            <ul>
+                <li>Tema oscuro: desactivado</li>
+                <li>Enviar comentarios</li>
+                <li>Buscar en Ayuda</li>
+                <li>Historial de búsqueda</li>
+                <li>Tus datos en la Búsqueda</li>
+                <li>Búsqueda avanzada</li>
+                <li>Configuración de la búsqueda</li>
+            </ul>
+        </div>
+    </footer>
+
+    <!--para que funcione como google-->
+    <script>
+        function op1() //función conectada con el botón de busqueda
+        {
+            var a=document.getElementById('texto').value; //para obtener el valor del input
+            if (a=="")
+            {
+                return;
+            }
+            else
+            {
+                var url1="http://www.google.com.co/search?hl=es&q=";
+                var url2="&btnG=Buscar&meta=";
+                url=url1 + a + url2; //concatenar
+                //url=url1 + encodeURIComponent(a) + url2; - sería para evitar los caracteres especiales
+                location.href=url; //para localizar la página en otra url
+            }
+        }
+        //para que se pueda buscar con enter
+        function runFunction(event) 
+        {
+            if (event.key === "Enter") //es para verificar que la tecla presionada fue Enter
+            {
+                //llamar a la función
+                op1();
+            }
+        }
+
+        function op2() //función conectada con el botón de suerte
+        {
+            var pagina="https://www.google.com/doodles";
+            location.href=pagina;
+        }
+        
+        //menu preferencias
+        function menu1()
+        {
+            const menu = document.querySelector('#menu-prefe1');
+            menu.classList.toggle('hidden');
+        }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,263 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header{
+    width: 100%;
+    height: 60px;
+}
+
+header nav {
+    display:flex;
+    justify-content: flex-end;
+}
+
+header nav .nav-right-section{
+    width: 250px;
+    height: auto;
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-content: center;
+    margin-top: 25px;
+}
+
+nav .nav-right-section a{
+    margin-right: 25px;
+    color: black;
+    text-decoration: none;
+}
+
+nav .nav-right-section a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #000001;
+}
+
+nav .nav-right-section .menu-icon{
+    background-image: url("https://img.icons8.com/ios-glyphs/90/000000/circled-menu.png");
+    width: 27px;
+    height: 27px;
+    background-size: contain;
+    background-position: center;
+    background-repeat: none;
+}
+
+nav .nav-right-section img{
+    border-radius: 80px;
+    margin-left: 15px;
+    width: 35px;
+    height: 35px;
+}
+
+main {
+    margin-top: 30px;
+    text-align: center;
+}
+
+main .main-logo{
+    width: 350px;
+    margin:0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-logo img{
+    width: 280px;
+    height: 90px;
+}
+
+main .main-input {
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 35px;
+}
+
+main .main-input-container {
+    width: 525px;
+    border-radius: 100px;
+    border: 1px solid #DFE1E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main .main-input input{
+    width: 450px;
+    height: 35px;
+    border: none; /*para quitar el border, que no se vea*/
+    outline: none; /*para quitar el border con el cursor*/
+}
+
+/*para poner la sobra al apuntar con el cursor*/
+main .main-input-container:hover{
+    box-shadow: 0 1px 6px 0 #20212447;
+}
+
+/*iconos del input*/
+main .main-input .search-icon{
+    background-image: url("https://img.icons8.com/android/24/000000/search.png");
+    width: 15px;
+    height: 15px;
+    padding-left: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+main .main-input .micro-icon{
+    background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/e/e8/Google_mic.svg/726px-Google_mic.svg.png");
+    width: 18px;
+    height: 18px;
+    padding-right: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+main .main-input .cam-icon{
+    background-image: url("https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcQU9EB56qp8B5qgt89OtkGpN86KFafBM7cBixk1nXOs7ukEVbJE");
+    width: 18px;
+    height: 18px;
+    padding-right: 30px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+main .main-buttons{
+    width: 530px;
+    margin: 0 auto;
+}
+/*ponerlos a la par*/
+main .main-buttons div{
+    display: inline-block;
+}
+
+main .main-buttons button{
+    height: 36px;
+    background-color: #f8f9fa;
+    border: 0;
+    font-size: 14px;
+    color: #2D2D2D;
+    border-radius: 6px;
+    padding: 0 15px;
+    margin-right: 12px;
+}
+
+main .main-buttons button:hover{
+    border: 1px solid #c6c6c6;
+    box-shadow: 0 0.5px 1px 0 #000001; /*sombra en la cajita*/
+    cursor: pointer;
+}
+
+/*botones de hasta abajo de google*/
+footer{
+    width: 100%;
+    height: 90px;
+    background-color: #f2f2f2;
+    position: absolute; /*OneNote*/
+    bottom: 0; /*se vaya todo hasta abajo*/
+    display: grid; /*cuadricula*/
+    grid-template-columns: 1fr 1fr; /*se divida en dos columnas - fr=fracción*/
+    align-items: center;
+    font-size: 14px;
+    border-top: 1px solid #e4e4e4;    
+}
+
+footer div{
+    width: 200%;
+    border-bottom: 1px solid #e4e4e4;
+}
+
+/*lista derecha*/
+footer .lista-derecha {
+    display:flex;
+    justify-content: flex-end;
+    list-style: none;
+    margin-right: 20px;
+}
+footer .lista-derecha a{
+    margin-right: 25px;
+    color: #777777;
+    text-decoration: none;
+}
+footer .lista-derecha a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #777777;
+}
+/*lista izquierda*/
+footer .lista-izquierda {
+    display:flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin-right: 50px;
+}
+footer .lista-izquierda a{
+    margin-right: 25px;
+    color: #777777;
+    text-decoration: none;
+}
+footer .lista-izquierda a:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    color: #777777;
+}
+
+/*país*/
+footer .pais-izquierda {
+    display:flex;
+    justify-content: flex-start;
+    list-style: none;
+    margin-right: 20px;
+}
+footer .pais-izquierda li{
+    margin-right: 25px;
+    color: #777777;
+    text-decoration: none;
+}
+
+/*menu del boton preferencias*/
+footer .lista-derecha .menu-preferencias {
+    cursor: pointer;
+    text-decoration: none;
+    position: relative;
+}
+  
+footer #menu-prefe1 { /*se usa el # porque el nombre es de un id*/
+    display: none;
+    position: absolute;
+    background-color: black;
+    border: 1px solid black;
+    padding: 10px;
+    bottom: calc(100% + 10px); /* Ajustamos la posición para que aparezca arriba */
+    right: 0; /* Alineamos el menú a la derecha */
+  }
+
+footer #menu-prefe1:before {
+    content: ""; /* Creamos un pseudo-elemento */
+    position: absolute;
+    width: 0;
+    height: 0;
+    bottom: 100%; /* Lo posicionamos arriba del menú */
+    right: 10px; /* Ajustamos el espaciado derecho */
+    border-style: solid;
+    border-width: 0 6px 6px 6px; /* Ajustamos el tamaño y forma de la flecha */
+    border-color: transparent transparent black transparent; /* Ajustamos el color de la flecha */
+}
+  
+footer #menu-prefe1 ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+  
+footer #menu-prefe1 li {
+    padding: 5px 0;
+    cursor: pointer;
+  }
+  
+footer .hidden {
+    display: none;
+  }
